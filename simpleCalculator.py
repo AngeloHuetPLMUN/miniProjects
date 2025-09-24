@@ -14,7 +14,7 @@ def main():
         result = eval(num)
         print(result)
     except ZeroDivisionError:
-        print("Error! Cannot Division by zero.")
+        print("Error! Cannot Divide by zero.")
     except Exception:
         print("Invalid Input!")
 
