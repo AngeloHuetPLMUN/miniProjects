@@ -4,12 +4,11 @@
 import random
 
 
-secret_number = random.randint(1, 100)
-
-
 def main():
+    secret_number = random.randint(1, 100)
     attempts = 0
-    print("you only have 10 attempts!", end="")
+    MAX_ATTEMPTS = 10
+    print("You only have 10 attempts!", end="")
     while True:
         try:
             guess_number = int(input("\nGuess random number from 1-100: "))
@@ -33,10 +32,15 @@ def main():
 
         if attempts == 5:
             print(f"You have {attempts} attempts left!")
-        elif attempts == 10:
+        elif attempts == MAX_ATTEMPTS:
             print(
-                f"You use your all {attempts} attempts you lose! 😭 tanga ka kase!")
+                f"You used all {attempts} attempts you lose! 😭 tanga ka kase!")
             break
 
 
-main()
+while True:
+    main()
+    again = input("Play again? (y/n): ").lower()
+    if again != "y":
+        print("Thanks for playing! 🌵")
+        break
