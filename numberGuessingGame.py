@@ -25,6 +25,10 @@ def main():
 
         attempts += 1
 
+        if guess_number == secret_number:
+            print(f"Nice! You Won in {attempts} attempts!")
+            break
+
         difference = abs(secret_number - guess_number)
 
         if guess_number > secret_number:
@@ -37,10 +41,6 @@ def main():
                 print("Almost there! Just a bit higher.")
             else:
                 print("Too low, try again.")
-
-        if guess_number == secret_number:
-            print(f"Nice! You Won in {attempts} attempts!")
-            break
 
         if attempts == 5:
             print(f"You have {MAX_ATTEMPTS - attempts} attempts left!")
