@@ -1,3 +1,4 @@
+# countDigits Done✅
 # Ask the user for input and count how many digits are in the text.
 text = input("Enter text: ")
 
