@@ -8,6 +8,7 @@ def add_task():
 
 
 def view_task():
+    print("You choose view task")
     if not tasks:
         print("No tasks yet!")
     else:
@@ -17,6 +18,7 @@ def view_task():
 
 
 def delete_task():
+    print("You choose delete task")
     if not tasks:
         print("No tasks to delete!")
     else:
