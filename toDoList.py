@@ -11,8 +11,8 @@ def view_task():
     if not tasks:
         print("No tasks yet!")
     else:
+        print("\nYour To-Do List!")
         for index, task in enumerate(tasks, start=1):
-            print("\nYour To-Do List!")
             print(f"{index}. {task}")
 
 
@@ -20,18 +20,21 @@ def delete_task():
     if not tasks:
         print("No tasks to delete!")
     else:
+        print("\nYour To-Do List!")
         for index, task in enumerate(tasks, start=1):
-            print("\nYour To-Do List!")
             print(f"{index}. {task}")
+        task_number = int(input("\nEnter the number to delete: "))
+        index = task_number - 1
 
-    task_number = int(input("\nEnter the number to delete: "))
-    index = task_number - 1
+        try:
+            tasks.pop(index)
+            print("Task deleted Successfully!")
+        except IndexError:
+            print("Invalid task number!")
 
-    try:
-        tasks.pop(index)
-        print("Task deleted Successfully!")
-    except IndexError:
-        print("Invalid task number!")
+        print("\nYour Current To-Do List!")
+        for index, task in enumerate(tasks, start=1):
+            print(f"{index}. {task}")
 
 
 def quit_program():
