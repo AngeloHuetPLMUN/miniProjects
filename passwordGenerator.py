@@ -43,5 +43,5 @@ while True:
     pass_preferences()
     again = input("\nDo you want to generate again? (y/n): ").lower()
     if again != "y":
-        print("Thanks for playing! 🌵")
+        print("Thanks for generating! 🌵")
         break
