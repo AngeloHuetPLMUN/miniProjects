@@ -62,7 +62,7 @@ def transform_text(text, method, key=3, action="E"):
         if action == "E":
             for char in text:
                 result += sub_map.get(char.lower(), char)
-        else:  # decrypt
+        else:
             inv_map = {v: k for k, v in sub_map.items()}
             for char in text:
                 result += inv_map.get(char, char)
